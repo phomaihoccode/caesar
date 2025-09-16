@@ -1,6 +1,6 @@
 import string
 name="ho thi thu thao"
-k=41
+k=40
 a=list(string.ascii_lowercase)  # Tạo danh sách chữ cái từ a đến z
 b=a[key:]+a[:key]
 print("Ten duoc ma hoa: ",end='')
