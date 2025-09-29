@@ -1,0 +1,23 @@
+import string
+
+# Bảng chữ cái
+abc = list(string.ascii_uppercase)
+
+# Plaintext
+P = "HoThiThuThao"
+
+# Khóa
+k = 40 % 26  # trong Z26 thì k=14
+
+ciphertext = ""
+
+for ch in P.upper():  # Đưa về chữ in hoa
+    if ch in abc:
+        idx = abc.index(ch)
+        new_idx = (idx + k) % 26  # cộng k
+        ciphertext += abc[new_idx]
+    else:
+        ciphertext += ch
+
+print(f"Plaintext : {P}")
+print(f"Ciphertext (k=40 ≡ 14 mod 26): {ciphertext}")
